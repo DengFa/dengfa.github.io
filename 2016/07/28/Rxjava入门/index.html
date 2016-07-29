@@ -4,23 +4,23 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hexo</title>
+    <title>Rxjava学习总结 | Vincent’s Zone</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
-    <meta name="author" content="John Doe">
+    <meta name="author" content="Vincent">
     
 
     
-    <meta name="description" content="Rxjava学习总结
-参考：给 Android 开发者的 RxJava 详解-扔物线深入浅出RxJava
-##基础“a library for composing asynchronous and event-based programs using observable sequences for the Java VM” （一个在 Java VM 上使用可观测的序列来组成==异步==的、基于事">
+    <meta name="description" content="参考：给 Android 开发者的 RxJava 详解-扔物线深入浅出RxJava
+##基础“a library for composing asynchronous and event-based programs using observable sequences for the Java VM” （一个在 Java VM 上使用可观测的序列来组成==异步==的、基于事件的程序的库）
+采用函">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/2016/07/27/Rxjava入门/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Rxjava学习总结
-参考：给 Android 开发者的 RxJava 详解-扔物线深入浅出RxJava
-##基础“a library for composing asynchronous and event-based programs using observable sequences for the Java VM” （一个在 Java VM 上使用可观测的序列来组成==异步==的、基于事">
+<meta property="og:title" content="Rxjava学习总结">
+<meta property="og:url" content="http://yoursite.com/2016/07/28/Rxjava入门/index.html">
+<meta property="og:site_name" content="Vincent’s Zone">
+<meta property="og:description" content="参考：给 Android 开发者的 RxJava 详解-扔物线深入浅出RxJava
+##基础“a library for composing asynchronous and event-based programs using observable sequences for the Java VM” （一个在 Java VM 上使用可观测的序列来组成==异步==的、基于事件的程序的库）
+采用函">
 <meta property="og:image" content="http://yoursite.com/Users/dengfa/MyZone/macDown/img/52eb2279jw1f2rx46dspqj20gn04qaad.jpg">
 <meta property="og:image" content="http://yoursite.com/Users/dengfa/MyZone/macDown/img/52eb2279jw1f2rx4ay0hrg20ig08wk4q.gif">
 <meta property="og:image" content="http://yoursite.com/Users/dengfa/MyZone/我的博客/img/52eb2279jw1f2rxcynbsuj20ha0d7wg2.jpg">
@@ -28,16 +28,16 @@
 <meta property="og:image" content="http://yoursite.com/Users/dengfa/MyZone/我的博客/img/52eb2279jw1f2rxd1vl7xj20hd0hzq6e.jpg">
 <meta property="og:image" content="http://yoursite.com/Users/dengfa/MyZone/我的博客/img/52eb2279jw1f2rxcu9f46g20go0cz4qp.gif">
 <meta property="og:image" content="http://yoursite.com/Users/dengfa/MyZone/我的博客/img/52eb2279jw1f2rxcvophmj20h30hl0v3.jpg">
-<meta property="og:updated_time" content="2016-07-28T09:19:46.000Z">
+<meta property="og:updated_time" content="2016-07-29T03:36:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="Rxjava学习总结
-参考：给 Android 开发者的 RxJava 详解-扔物线深入浅出RxJava
-##基础“a library for composing asynchronous and event-based programs using observable sequences for the Java VM” （一个在 Java VM 上使用可观测的序列来组成==异步==的、基于事">
+<meta name="twitter:title" content="Rxjava学习总结">
+<meta name="twitter:description" content="参考：给 Android 开发者的 RxJava 详解-扔物线深入浅出RxJava
+##基础“a library for composing asynchronous and event-based programs using observable sequences for the Java VM” （一个在 Java VM 上使用可观测的序列来组成==异步==的、基于事件的程序的库）
+采用函">
 <meta name="twitter:image" content="http://yoursite.com/Users/dengfa/MyZone/macDown/img/52eb2279jw1f2rx46dspqj20gn04qaad.jpg">
 
     
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Vincent’s Zone" type="application/atom+xml">
     
     
     <link rel="icon" href="/img/favicon.ico">
@@ -55,14 +55,14 @@
 <div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.png" alt="Hexo" title="Hexo"/></a>
+				<a href="/"><img src="/img/logo.png" alt="Vincent’s Zone" title="Vincent’s Zone"/></a>
 			</div>
 			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
-				<h2 class="blog-motto"></h2>
+				<h1 class="site-name"><a href="/" title="Vincent’s Zone">Vincent’s Zone</a></h1>
+				<h2 class="blog-motto">不积跬步,无以至千里;不积小流,无以成江海</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -78,7 +78,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:yoursite.com">
 					</form>
 					
@@ -94,28 +94,27 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/07/27/Rxjava入门/" title="" itemprop="url"></a>
+      <a href="/2016/07/28/Rxjava入门/" title="Rxjava学习总结" itemprop="url">Rxjava学习总结</a>
   </h1>
   <p class="article-author">By
        
-		<a href="/about" title="John Doe" target="_blank" itemprop="author">John Doe</a>
+		<a href="/about" title="Vincent" target="_blank" itemprop="author">Vincent</a>
 		
   <p class="article-time">
-    <time datetime="2016-07-27T09:45:57.000Z" itemprop="datePublished"> 发表于 2016-07-27</time>
+    <time datetime="2016-07-27T16:00:00.000Z" itemprop="datePublished"> Published 2016-07-28</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
+			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Rxjava学习总结"><span class="toc-number">1.</span> <span class="toc-text">Rxjava学习总结</span></a></li></ol>
+			
 		
 		</div>
 		
-		<h1 id="Rxjava学习总结"><a href="#Rxjava学习总结" class="headerlink" title="Rxjava学习总结"></a>Rxjava学习总结</h1><hr>
-<p>参考：<br><a href="https://gank.io/post/560e15be2dca930e00da1083#toc_19" target="_blank" rel="external">给 Android 开发者的 RxJava 详解-扔物线</a><br><a href="http://blog.csdn.net/lzyzsd/article/details/41833541" target="_blank" rel="external">深入浅出RxJava</a></p>
+		<p>参考：<br><a href="https://gank.io/post/560e15be2dca930e00da1083#toc_19" target="_blank" rel="external">给 Android 开发者的 RxJava 详解-扔物线</a><br><a href="http://blog.csdn.net/lzyzsd/article/details/41833541" target="_blank" rel="external">深入浅出RxJava</a></p>
 <p>##基础<br>“a library for composing asynchronous and event-based programs using observable sequences for the Java VM” （一个在 Java VM 上使用可观测的序列来组成==异步==的、基于事件的程序的库）</p>
 <p>采用函数响应式编程的思想，使异步代码更简洁、逻辑更清晰，避免了令人头痛的回调的嵌套、线程调度等问题。</p>
 <p>###RxJava 的观察者模式<br>RxJava 有四个基本概念：Observable (被观察者)、 Subscriber (观察者)、 subscribe (订阅)、事件。</p>
@@ -309,6 +308,16 @@
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Rx/">Rx</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Rx/">Rx</a><a href="/tags/note/">note</a>
+  </div>
 
 </div>
 
@@ -316,7 +325,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/07/27/Rxjava入门/" data-title="Hexo" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/07/28/Rxjava入门/" data-title="Rxjava学习总结 | Vincent’s Zone" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -327,44 +336,57 @@
    	       
 	</article>
 	
-<nav class="article-nav clearfix">
- 
- <div class="prev" >
- <a href="/2016/07/28/hello-world/" title="Hello World">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Hello World</span>
-</a>
-</div>
-
-
-</nav>
-
 	
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
+  <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Rxjava学习总结"><span class="toc-number">1.</span> <span class="toc-text">Rxjava学习总结</span></a></li></ol>
+ 
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
 
 
   
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Rx/" title="Rx">Rx<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
 
   
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Rx/" title="Rx">Rx<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/note/" title="note">note<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -386,11 +408,11 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
+  <p class="asidetitle">Weibo</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
 </div>
 
@@ -431,7 +453,7 @@
 		<p class="copyright">
 		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
 		
-		<a href="/about" target="_blank" title="John Doe">John Doe</a>
+		<a href="/about" target="_blank" title="Vincent">Vincent</a>
 		
 		
 		</p>
@@ -617,7 +639,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
